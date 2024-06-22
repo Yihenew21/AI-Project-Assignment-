@@ -20,3 +20,6 @@ def check_winner(board, player):
         return True
 
     return False
+def check_draw(board):
+    """Check if the game is a draw."""
+    return all([cell != " " for row in board for cell in row])
