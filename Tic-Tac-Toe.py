@@ -45,3 +45,18 @@ def tic_tac_toe():
                     print("Invalid move. Try again.")
             except ValueError:
                 print("Invalid input. Please enter a number between 0 and 2.")
+                # Check for a winner or draw
+        if check_winner(board, current_player):
+            print_board(board)
+            print(f"Player {current_player} wins!")
+            break
+        elif check_draw(board):
+            print_board(board)
+            print("It's a draw!")
+            break
+
+        # Switch players
+        current_player = "O" if current_player == "X" else "X"
+
+if __name__ == "__main__":
+    tic_tac_toe()
