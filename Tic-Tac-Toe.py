@@ -49,6 +49,7 @@ def tic_tac_toe():
         if check_winner(board, current_player):
             print_board(board)
             print(f"Player {current_player} wins!")
+            print("congradulation!!!")
             break
         elif check_draw(board):
             print_board(board)
